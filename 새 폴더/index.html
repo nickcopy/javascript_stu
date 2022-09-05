@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script>
+      function number(num) {
+        if (0 >= num) {
+          throw "0이상의 값을 입력하세요";
+        } else if (100 <= num) {
+          throw "100 이하의 값을 입력해야 합니다. ";
+        }
+        return num;
+      }
+
+      try {
+        console.log(number(100));
+        console.log(number(101));
+      } catch (err) {
+        console.log(`오류 발생 ${err}`);
+      }
+    </script>
+  </head>
+  <body>
+    <script src="main.js"></script>
+  </body>
+</html>

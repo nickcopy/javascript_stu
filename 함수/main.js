@@ -1,13 +1,13 @@
-const myPrint = (...data) => {
-  let sum = " ";
+// const myPrint = (...data) => {
+//   let sum = " ";
 
-  for (let i = 0; i < data.length; i++) {
-    sum = sum + data[i] + " ";
-  }
-  // console.log(data.split(""));
-};
+//   for (let i = 0; i < data.length; i++) {
+//     sum = sum + data[i] + " ";
+//   }
+//   // console.log(data.split(""));
+// };
 
-myPrint("안녕", "하세요", "문어", "입니다");
+// myPrint("안녕", "하세요", "문어", "입니다");
 
 // const min = (...items) => {
 //   console.log("dqwdqw", "qwdqwd", "qwfqwfqw");

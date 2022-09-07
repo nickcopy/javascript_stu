@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      #avatar {
+        background-color: red;
+        position: absolute;
+        top: 5px;
+        left: 3px;
+      }
+    </style>
+    <script>
+      let x = 0,
+        y = 0;
+      document.addEventListener("DOMContentLoaded", () => {
+        const 고양이 = document.querySelector("#avatar");
+
+        고양이.addEventListener("click", () => {
+          console.log("잘 클릭됨");
+        });
+
+        document.addEventListener("keydown", (지금이밴트) => {
+          console.log(typeof 고양이.style.top);
+          switch (지금이밴트.key) {
+            case "ArrowLeft":
+              console.log("왼쪽");
+              x = x - 10;
+              고양이.style.left = `${--x}px`;
+              break;
+            case "ArrowRight":
+              x = x + 10;
+              console.log("오른쪽");
+              고양이.style.left = `${++x}px`;
+              break;
+            case "ArrowUp":
+              console.log("위");
+              y = y - 10;
+              고양이.style.top = `${--y}px`;
+              break;
+            case "ArrowDown":
+              console.log("아래");
+              y = y + 10;
+              고양이.style.top = `${++y}px`;
+              break;
+          }
+        });
+      });
+    </script>
+  </head>
+  <body style="position: relative">
+    <div id="avatar">😑</div>
+  </body>
+</html>

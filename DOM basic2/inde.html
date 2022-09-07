@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     <!-- // document.addEventListener("DOMContentLoaded", () => {
+       
+       
+        -->
+      <!-- //  const covers = document.querySelectorAll(".s");
+      //  console.log(covers);
+       
+      // //  for(let i=0;i<5;i++){
+      // //  console.log(covers[i].setAttribute("src","https://cdn.lorem.space/images/movie/.cache/150x220/aquaman.jpg"));
+       
+      // // }
+      //  covers.forEach((item,index)=>{
+      //   let re = Math.random();
+      //   re *= 100;
+      //   re = Math.ceil(re);
+      //   let url = "http://placekitten.com/200/"+re;
+      //  item.setAttribute("src",url);
+      //  })
+       
+        // const eleImg = document.querySelector(".cover");
+        // console.log(eleImg);
+        // eleImg.setAttribute("src","https://cdn.lorem.space/images/movie/.cache/150x220/aquaman.jpg");
+        // const attr = eleImg.getAttribute("src");
+        // console.log(`src 측정 값은 : ${attr}`)
+        
+        
+        // console.log("로딩됐나");
+        // const sunmoon = document.querySelector(".sunmoon");
+        // sunmoon.textContent = "선문대학교";
+        // console.log(sunmoon.className);
+        // // sunmoon.classList = "asan";
+        // console.log(sunmoon.classList);
+        // console.log(sunmoon);
+        // console.log(document.body);
+     // });  -->
+     <style>
+      .divELE{
+        cursor : default;
+      }
+      .unselectable {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.all {
+  -moz-user-select: all;
+  -webkit-user-select: all;
+  -ms-user-select: all;
+  user-select: all;
+}#target{
+  border: 1px solid gray;
+  border-radius: 2px;
+  display: inline;
+  background-color: #efefef;
+  font-size: 13px;
+  padding: 2.5px 7px;
+  cursor: default;
+}
+#target:hover{
+  background-color: #cfcfcf;
+  border: 1px solid rgb(114, 114, 114);
+}
+     </style>
+      <script>
+   let countSel = 0;
+   let 현재상태 = false;
+        document.addEventListener('DOMContentLoaded',()=>{
+
+
+
+   const clickE = document.querySelector("#target");
+          const btnconnect = document.querySelector(".connect");
+   const btndisconnect = document.querySelector(".disconnect");
+   const mes = document.querySelector("#state");
+  const countE = document.querySelector("#count");
+   btnconnect.addEventListener("click",()=>{
+    현재상태 = true;
+    mes.textContent = "연결됨"+현재상태;
+    
+   })
+   btndisconnect.addEventListener("click",()=>{
+    현재상태 = false;
+    mes.textContent = "해제됨";
+    clickE.removeEventListener("click",clickE
+      
+    
+    )
+    
+   })
+   clickE.addEventListener("click",()=>{
+    countSel++;
+    countE.textContent = countSel;  
+   })
+          
+
+
+
+
+
+
+
+
+
+          
+      
+      
+      
+      
+      
+      
+      
+          //  const 삭제할요소 = document.querySelector("#two");
+      //  console.log(삭제할요소);
+       
+      //   const 부모 = 삭제할요소.parentNode;
+      //   console.log(부모);
+      //   부모.removeChild(삭제할요소);
+       
+       
+       
+       
+          // const divs = document.querySelectorAll("body>div")
+
+
+          // const newH1 = document.createElement("h1");
+          // console.log(newH1);
+          // newH1.textContent = "들어가나";
+
+         
+          // const newH2 = document.createElement("h2");
+          // newH2.textContent = "2번";
+          // document.body.appendChild(newH2);
+          // const two = document.querySelector("#two");
+          // two.appendChild(newH1);
+
+
+          // divs.forEach((div,index)=>{
+          //   console.log(div,index);
+          //   const val = index*10;
+          //   div.style.height = `10px`;
+          //   div.style.backgroundColor = `rgba(${val},${val},${val})`;
+    
+          // })
+
+
+
+
+        })
+
+
+    </script>
+    <!-- <style>
+      .sunmoon {
+        color: red;
+      }
+      #sun {
+        color: red;
+      }
+      #go {
+        color: royalblue;
+      }
+      .go {
+        color: green);
+      }
+      #container {
+        background-color: aqua;
+      }
+      #container span {
+        font-weight: bold;
+      }
+      #container #go{
+        border: 5px;
+        color: burlywood;
+      }
+    </style> -->
+  </head>
+  <body>
+
+
+<div id = target>날 눌러봐</div>
+<div> 클릭 회수 : <span id = "count">0</span></div>
+<button class ="connect">이벤트 연결</butten>
+<button class = "disconnect ">이벤트 해제</button>
+<p>이벤트 연결상태 :<span id = state>해제됨</span></p>
+
+
+
+
+
+
+    <!-- <div class="container" >
+  <div id="one" class = "divele unselectable">첫번째</div>
+  <div id = "two"class = "divele unselectable">두번째</div>
+  <div id = "three"class = "divele unselectable">세번쨰</div>
+  <div id = "debug">원클릭 되었습니다</div>
+</div> -->
+<div></div>
+
+
+    <!-- <div class="sunmoon btn btn-lg btn-orange">DIV 태그 입니다.</div>
+    <div id="container">
+      <span name="first">안</span>
+      <span class="sun" name="second">녕</span>
+      <span id="go">하</span>
+      <span class="go">세</span>
+      <span>요</span>
+      <span class="sun">세1</span>
+      <span class="sun">세2</span>
+      <span class="sun">세3</span>
+    </div> 
+    <script>
+      // function listener(){}
+      // let number = 0;
+      // // const listener = () => {
+      // //   console.log(`${number}번째 클릭입니다`);
+      // //   number++;
+      // // };
+      // document.addEventListener("mousedown", () => {
+      //   console.log(`${number}마우스다운`);
+      // });
+      // document.addEventListener("mouseup", () => {
+      //   console.log(`${number}업`);
+      //   number++;
+      // });
+
+      // const div = document.querySelector(".sunmoon");
+      // console.log(div);
+
+      // const sun = document.querySelector("#go");
+      // console.log(sun);
+      // document.querySelectorAll
+      // const result = document.getElementById("go");
+      // const result2 = document.getElementsByClassName("sun");
+      // console.log(result2);
+      // console.log(result2.length);
+      // console.log(result2[0].textContent);
+      // console.log(result.innerText);
+      // console.log(result.textContent);
+      // const span = document.getElementsByTagName("span");
+      // console.log(span[0].textContent);
+      // const name = document.getElementsByName("first");
+      // consore.log(name);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const email = document.querySelector(".email");
+        const btn = document.querySelector("#submit");
+        const spanError = document.querySelector(".error");
+        let erMsg;
+        btn.addEventListener("click", () => {
+          const msg = email.value;
+          console.log(msg);
+          erMsg = msg.indexOf("@");
+          console.log(erMsg);
+          if (erMsg !== -1) {
+            spanError.textContent = "@가 없습니다";
+          }
+          erMsg = msg.indexOf(".");
+          console.log(erMsg);
+          if (erMsg !== -1) {
+            spanError.textContent = ". 또는 정상적인 이메일 형식이 아닙니다";
+          }
+          spanError.textContent = "정상적인 이메일입니다";
+        });
+      });
+    </script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <input type="text" class="email" placeholder="이메일을 입력하세요" />
+      <button id="submit">로그인</button>
+    </div>
+    <div>
+      <span class="error">오류 메시지</span>
+    </div>
+  </body>
+</html>

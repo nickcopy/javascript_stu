@@ -18,53 +18,53 @@
           }
         });
 
-        if (id) {
-          textarea.addEventListener("blur", () => {
-            clearInterval(id);
-            h1.textContent = "멈춰다!";
-          });
-        }
-      });
+      //   if (id) {
+      //     textarea.addEventListener("blur", () => {
+      //       clearInterval(id);
+      //       h1.textContent = "멈춰다!";
+      //     });
+      //   }
+      // });
 
-      const 입력창 = document.querySelector("#target");
-      입력창.addEventListener("key");
+      // const 입력창 = document.querySelector("#target");
+      // 입력창.addEventListener("key");
 
-      document.onreadystatechange = (event) => {
-        console.log(event);
-        const 상태 = document.readyState;
-        console.log(상태);
-      };
-      console.log(`${document.readyState}....`);
+      // document.onreadystatechange = (event) => {
+      //   console.log(event);
+      //   const 상태 = document.readyState;
+      //   console.log(상태);
+      // };
+      // console.log(`${document.readyState}....`);
 
-      setTimeout(() => {
-        document.readyState = "loading";
-        console.log(document.readyState);
-      }, 2000);
+      // setTimeout(() => {
+      //   document.readyState = "loading";
+      //   console.log(document.readyState);
+      // }, 2000);
 
-      document.addEventListener("DOMContentLoaded", () => {
-        console.log("문서가 로딩됨");
-      });
-      document.onlode = () => {};
+      // document.addEventListener("DOMContentLoaded", () => {
+      //   console.log("문서가 로딩됨");
+      // });
+      // document.onlode = () => {};
 
-      const 컨테이너 = document.querySelector("#container");
-      컨테이너.addEventListener("click", () => {
-        console.log("클릭됨 -1");
-      });
+      // const 컨테이너 = document.querySelector("#container");
+      // 컨테이너.addEventListener("click", () => {
+      //   console.log("클릭됨 -1");
+      // });
 
-      컨테이너.addEventListener("click", () => {
-        console.log("클릭됨 -2");
-      });
+      // 컨테이너.addEventListener("click", () => {
+      //   console.log("클릭됨 -2");
+      // });
 
-      const container = document.querySelector("#container");
-      console.log(container);
-      container.style[color] = "red";
-      container.onclick = () => {
-        console.log("클릭됨");
-      };
+      // const container = document.querySelector("#container");
+      // console.log(container);
+      // container.style[color] = "red";
+      // container.onclick = () => {
+      //   console.log("클릭됨");
+      // };
 
-      const testFn = () => {
-        console.log("클릭됨");
-      };
+      // const testFn = () => {
+      //   console.log("클릭됨");
+      // };
     </script>
 
     <title>Document</title>

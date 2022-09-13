@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <script>
+    document.addEventListener("DOMContentLoaded", (event) => {
+      const eleTodo = document.querySelector("#todo-str");
+      const eleBtnAdd = document.querySelector("#btn-add");
+      const eleTodoList = document.querySelector("#todo-list");
+
+      const temp = localStorage.getItem("todoArr");
+      let todoArr = temp ? JSON.parse(temp) : [];
+      function saveTodo() {
+        localStorage.setItem("todoArre", JSON.stringify(todoArr));
+      }
+      function randerTodo() {
+        eleTodoList.innerHTML = "";
+        if (ele.checked === true) {
+          text.style.textD;
+        }
+
+        span.textContent = ele.todoStr;
+        button.textContent = "✖";
+        button.addEventListener("click", (event) => {
+          const ts = event.currentTarget.dataset.ts;
+          todoArr = todoArr.filter((value) => {
+            if (String(value.ts) === String(ts)) {
+              return false;
+            } else {
+              return true;
+            }
+          });
+        });
+        div.appendChild(ckbox);
+        div.appendChild(span);
+        div.appendChild(button);
+        eleTodoList.appendChild(div);
+      }
+
+      eleBtnAdd.addEventListener("click", (event) => {
+        const 할일문자열 = eleTodo.value.trim();
+        if (!할일문자열) return;
+
+        todoArr.push({ todo: 할일문자열, check: false });
+        eleTodo.vlaue = "";
+        randerTodo();
+      });
+
+      saveTodo();
+    });
+  </script>
+  <body>
+    <input tyoe="text" id="todo-str" />
+
+    <button id="btn-add">등록</button>
+    <div id="todo-list">
+      <div data-key="1">
+        <input type="checkbox" />
+        <span>첫번째할일</span>
+        <button>삭제</button>
+      </div>
+      <div ata-key="2">
+        <input type="checkbox" />
+        <span>첫번째할일</span>
+        <button>삭제</button>
+      </div>
+    </div>
+  </body>
+</html>

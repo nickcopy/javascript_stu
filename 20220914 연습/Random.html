@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const body = document.querySelector("body");
+        function ff(numver) {
+          switch (numver) {
+            case 10:
+              return "A";
+              break;
+            case 11:
+              return "B";
+              break;
+            case 12:
+              return "C";
+              break;
+            case 13:
+              return "D";
+              break;
+            case 14:
+              return "E";
+              break;
+            case 15:
+              return "F";
+              break;
+          }
+        }
+        document.addEventListener("keyup", () => {
+          let a = [0, 0, 0, 0, 0, 0];
+          let color = "#";
+          for (let i = 0; i < 6; i++) {
+            a[i] = Math.floor(Math.random() * 16);
+            if (a[i] >= 10) {
+              color = color + ff(a[i]);
+              console.log(color);
+            } else {
+              color = color + String(a[i]);
+              console.log(color);
+            }
+          }
+
+          body.style.backgroundColor = color;
+          body.textContent = color;
+        });
+      });
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const jon = document.querySelector("p");
+
+        const start = document.querySelector("#startBtn");
+        const stop = document.querySelector("#stopBtn");
+        const reset = document.querySelector("#reset");
+
+        let h = 0;
+        let m = 0;
+        let s = 0;
+        let ms = 0;
+        let timerId;
+        start.addEventListener("click", () => {
+          timerId = setInterval(function () {
+            jon.textContent =
+              String(h).padStart(2, "0") +
+              ":" +
+              String(m).padStart(2, "0") +
+              ":" +
+              String(s).padStart(2, "0") +
+              ":" +
+              String(ms).padStart(2, "0");
+            if (ms >= 100) {
+              s++;
+              ms = 0;
+              if (s >= 60) {
+                m++;
+                s = 0;
+                if (m >= 60) {
+                  h++;
+                  m = 0;
+                }
+              }
+            }
+            ms++;
+          }, 10);
+        });
+
+        stop.addEventListener("click", () => {
+          clearInterval(timerId);
+        });
+        reset.addEventListener("click", () => {
+          jon.textContent = "00:00:00:00";
+          h = 0;
+          m = 0;
+          s = 0;
+          ms = 0;
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div></div>
+    <span>
+      soptwatch
+      <p>00:00:00:00</p>
+    </span>
+    <button id="startBtn">시작</button>
+    <button id="stopBtn">중단</button>
+    <button id="reset">리셋</button>
+  </body>
+</html>
